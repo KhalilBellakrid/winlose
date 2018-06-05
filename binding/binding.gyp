@@ -14,12 +14,30 @@
 			"<!(node -e \"require('nan')\")",
 			"../src",
 		],
+		"copies": [
+	        {
+	          'destination': '<(module_root_dir)/build/Release/',
+	          'files': ['<(module_root_dir)/<(run_path)/Debug/winlose<(SHARED_LIB_SUFFIX)']
+	        },
+	        {
+	          'destination': '<(module_root_dir)/build/Release/',
+	          'files': ['<(module_root_dir)/<(run_path)/Debug/winlose.lib']
+	        },
+	        {
+	          'destination': '<(module_root_dir)/build/',
+	          'files': ['<(module_root_dir)/<(run_path)/Debug/winlose<(SHARED_LIB_SUFFIX)']
+	        },
+	        {
+	          'destination': '<(module_root_dir)/build/',
+	          'files': ['<(module_root_dir)/<(run_path)/Debug/winlose.lib']
+	        },
+      	],
 		'conditions': [
 			['OS=="mac"', {
 				'libraries': ['-Wl,-rpath,<!(pwd)/<@(run_path)', '-L<@(library_path)', '-lwinlose'],
 			}],
 			['OS=="win"', {
-				'libraries': ['../../../winlose-build/src/Debug/winlose.lib'],
+				'libraries': ['winlose'],
 			}],
 		]
 
