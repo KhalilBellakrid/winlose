@@ -16,24 +16,16 @@
 		],
 		"copies": [
 	        {
+	          'files': ['<(module_root_dir)/<(run_path)/$(CONFIG)/winlose<(SHARED_LIB_SUFFIX)'],
 	          'destination': '<(module_root_dir)/build/Release/',
-	          'files': ['<(module_root_dir)/<(run_path)/$(CONFIG)/winlose<(SHARED_LIB_SUFFIX)']
 	        },
 	        {
-	          'destination': '<(module_root_dir)/build/Release/',
-	          'files': ['<(module_root_dir)/<(run_path)/$(CONFIG)/winlose.lib']
-	        },
-	        {
+	          'files': ['<(module_root_dir)/<(run_path)/$(CONFIG)/winlose.lib'],
 	          'destination': '<(module_root_dir)/build/',
-	          'files': ['<(module_root_dir)/<(run_path)/$(CONFIG)/winlose<(SHARED_LIB_SUFFIX)']
 	        },
 	        {
+	          'files': ['<(module_root_dir)/ucrtbased.dll'],
 	          'destination': '<(module_root_dir)/build/',
-	          'files': ['<(module_root_dir)/<(run_path)/$(CONFIG)/winlose.lib']
-	        },
-	        {
-	          'destination': '<(module_root_dir)/build/',
-	          'files': ['<(module_root_dir)/ucrtbased.dll']
 	        },
       	],
 		'conditions': [

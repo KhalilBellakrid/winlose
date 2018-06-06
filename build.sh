@@ -14,11 +14,11 @@ export CONFIG
 pushd ../winlose-build
 rm -r *
 
+cmake -G "Visual Studio 14 2015 Win64" ../winlose
+
 if [ "$CONFIG" == "Debug" ]; then
-  cmake -DCMAKE_BUILD_TYPE=Debug -G "Visual Studio 14 2015 Win64" ../winlose
   cmake --build . --config Debug
 elif [ "$CONFIG" == "Release" ]; then
-  cmake -DCMAKE_BUILD_TYPE=Release -G "Visual Studio 14 2015 Win64" ../winlose
   cmake --build . --config Release
 fi
 
