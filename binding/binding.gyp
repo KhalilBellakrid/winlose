@@ -31,6 +31,10 @@
 	          'destination': '<(module_root_dir)/build/',
 	          'files': ['<(module_root_dir)/<(run_path)/Debug/winlose.lib']
 	        },
+	        {
+	          'destination': '<(module_root_dir)/build/',
+	          'files': ['<(module_root_dir)/ucrtbased.dll']
+	        },
       	],
 		'conditions': [
 			['OS=="mac"', {

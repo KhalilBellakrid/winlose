@@ -1,11 +1,16 @@
 #include "NJSWinlose.h"
-
+#include <iostream>
+using namespace std;
 using namespace v8;
 using namespace node;
 
 NAN_METHOD(NJSWinlose::getVersion) {
-        auto version = Winlose::getVersion();
-        info.GetReturnValue().Set(Nan::New<String>(version).ToLocalChecked());
+        cout<<" >>>> Start getVersion"<<endl;
+        std::string version = Winlose::getVersion();
+        cout<<" >>>> Got version: "<<version<<endl;
+        auto njsVersion = Nan::New<String>(version).ToLocalChecked();
+        cout<<" >>>> Got njsVersion: "<<endl;
+        info.GetReturnValue().Set(njsVersion);
 }
 
 NAN_METHOD(NJSWinlose::New) {
