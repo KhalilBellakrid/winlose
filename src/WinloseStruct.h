@@ -5,19 +5,24 @@
 #ifndef WINLOSE_WINLOSESTRUCT_H
 #define WINLOSE_WINLOSESTRUCT_H
 
-#ifndef WINLOSE_EXPORT
-    #if defined(_MSC_VER) && _MSC_VER <= 1990
-        #include <winlose_export.h>
-    #else
-        #define WINLOSE_EXPORT
-    #endif
-#endif
+
 
 #include <string>
 struct WinloseStruct {
     std::string name;
+
+    WinloseStruct(const std::string &_name):name(_name)
+    {}
+    WinloseStruct(const WinloseStruct& cpy) {
+        this->name = cpy.name;
+    }
+    WinloseStruct &operator=(const WinloseStruct&cpy) {
+        this->name = cpy.name;
+        return *this;
+    }
+    WinloseStruct() = default;
 };
 
-extern WINLOSE_EXPORT const WinloseStruct WINLOSE;
+
 
 #endif //WINLOSE_WINLOSESTRUCT_H

@@ -1,4 +1,4 @@
-add_library(winlose SHARED Winlose.cpp Winlose.h WinloseStruct.cpp WinloseStruct.h)
+add_library(winlose SHARED Winlose.cpp Winlose.h WinloseStruct.h WinloseGlobal.cpp WinloseGlobal.h)
 
 if(MSVC)
     include(GenerateExportHeader)
