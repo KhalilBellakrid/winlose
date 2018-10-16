@@ -1,4 +1,4 @@
-add_library(winlose SHARED Winlose.cpp Winlose.h api/Winlose.hpp)
+add_library(winlose SHARED Winlose.cpp Winlose.h api/Winlose.hpp api/WinloseNodeJS.hpp)
 
 if(MSVC)
     include(GenerateExportHeader)

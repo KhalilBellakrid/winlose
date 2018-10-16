@@ -1,3 +1,12 @@
+WinloseNodeJS = interface +n {
+	add(lhs1: i32, lhs2: i32): i32;
+}
+
 Winlose = interface +c {
 	static getVersion(): string;
+	callAdd(lhs1: i32, lhs2: i32): i32;
+	static newInstance(operation: WinloseNodeJS): Winlose;
 }
+
+
+

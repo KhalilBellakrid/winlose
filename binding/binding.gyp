@@ -8,7 +8,7 @@
     'sources': [
       '../nodejs-binding/winlose.cpp',
       '../nodejs-binding/NJSWinloseCpp.cpp',
-      '../nodejs-binding/NJSWinloseCpp.h',
+      '../nodejs-binding/NJSWinloseNodeJS.cpp',
     ],
     'include_dirs': [
       "<!(node -e \"require('nan')\")",

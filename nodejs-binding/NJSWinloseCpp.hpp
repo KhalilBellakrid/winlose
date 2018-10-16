@@ -5,6 +5,8 @@
 #define DJINNI_GENERATED_NJSWINLOSE_HPP
 
 
+#include "NJSWinloseNodeJS.hpp"
+#include <cstdint>
 #include <memory>
 #include <string>
 
@@ -30,6 +32,10 @@ public:
 
 private:
     static NAN_METHOD(getVersion);
+
+    static NAN_METHOD(callAdd);
+
+    static NAN_METHOD(newInstance);
 
     static NAN_METHOD(New);
 

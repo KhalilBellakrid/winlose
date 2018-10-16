@@ -4,6 +4,7 @@
 #include <nan.h>
 #include <node.h>
 
+#include "NJSWinloseNodeJS.hpp"
 #include "NJSWinloseCpp.hpp"
 
 using namespace v8;
@@ -12,6 +13,7 @@ using namespace node;
 static void initAll(Local<Object> target)
 {
     Nan::HandleScope scope;
+    NJSWinloseNodeJS::Initialize(target);
     NJSWinlose::Initialize(target);
 }
 NODE_MODULE(winlose,initAll);

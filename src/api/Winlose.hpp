@@ -4,15 +4,23 @@
 #ifndef DJINNI_GENERATED_WINLOSE_HPP
 #define DJINNI_GENERATED_WINLOSE_HPP
 
+#include <cstdint>
+#include <memory>
 #include <string>
 
 namespace api {
+
+class WinloseNodeJS;
 
 class Winlose {
 public:
     virtual ~Winlose() {}
 
     static std::string getVersion();
+
+    virtual int32_t callAdd(int32_t lhs1, int32_t lhs2) = 0;
+
+    static std::shared_ptr<Winlose> newInstance(const std::shared_ptr<WinloseNodeJS> & operation);
 };
 
 }  // namespace api
