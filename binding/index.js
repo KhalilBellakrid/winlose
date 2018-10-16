@@ -1,4 +1,4 @@
-const binding = require('bindings')('Winlose_nodejs');
+const binding = require('bindings')('winlose');
 const winlose = new binding.NJSWinlose();
 console.log(winlose)
 const winloseVersion = winlose.getVersion()

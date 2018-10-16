@@ -4,15 +4,15 @@
     'library_path%': '../../../winlose-build/src'
   },
   'targets': [{
-    'target_name': 'Winlose_nodejs',
+    'target_name': 'winlose',
     'sources': [
-      '../nodejs/Winlose_nodejs.cpp',
-      '../nodejs/NJSWinlose.cpp',
-      '../nodejs/NJSWinlose.h',
+      '../nodejs-binding/winlose.cpp',
+      '../nodejs-binding/NJSWinloseCpp.cpp',
+      '../nodejs-binding/NJSWinloseCpp.h',
     ],
     'include_dirs': [
       "<!(node -e \"require('nan')\")",
-      '../src',
+      '../src/api',
     ],
     'conditions': [
       ['OS=="mac"', {

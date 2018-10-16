@@ -1,6 +1,7 @@
 #ifndef WINLOSE_H
 #define WINLOSE_H
 
+#include "api/Winlose.hpp"
 
 #include <string>
 #ifndef WINLOSE_EXPORT
@@ -11,8 +12,6 @@
     #endif
 #endif
 
-class Winlose {
-public:
-    static WINLOSE_EXPORT std::string getVersion();
+class Winlose : public api::Winlose {
 };
 #endif //WINLOSE_H
